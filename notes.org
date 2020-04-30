@@ -1,0 +1,30 @@
+** Mendel (1966): https://paperpile.com/app/p/069d072e-636f-0a21-957b-da384bf145a0
+The first documented in vivo study of the "wide dynamic range" (WDR) neuron was conducted in 1966. This study, evaluating the dorsolateral column (within caudal L4 or L5) of the lumbar enlargement in adult cats, observed neurons which responded in a differential manner to contralateral A fiber and ipsilateral C fiber stimulation via their receptive fields. These neurons fired in response to both receptive fields, but a more "intense firing consist(ing) mainly of slower adaptation" was achieved from C fiber stimulation, which was additionally inhibited by A fiber stimulation. Though the synaptology and connectivity between the peripheral fibers and these WDR neurons was not explored at the time, future studies would further explore these networks and the WDR population in the dorsolateral column.
+
+*** Through this and subsequent research several characteristics of WDR were defined and some theories on sensory encoding have been developed:
+**** WDR play a role in exteroreceptive pain
+***** They respond in graded fashion to noxious stimuli, as well as sharper and hotter objects in a manner that parallels psychophysical responses. The response is additionally a positively accelerating power function.
+***** The gradation in their response reflects our ability to detect small shifts in noxious stimuli. This feature unlike NS neurons.
+**** WDR respond differentially over a broad range of stimulus intensities
+WDR neurons respond to both innocuous and noxious stimuli. Impulse frequency response of noxious stimuli is distinctly higher. 
+**** WDR have distinct receptive fields
+This consists a central cutaneous zone. Innocuous and noxious stimuli produce in this region produce a differentiable response--noxious stimuli in this zone causes a distinct high impulse frequency response. A larger surrounding zone responds mainly to noxious stimuli. 
+**** Populations of WDR neurons and frequencies provide encoding on stimuli type and spatial distribution.
+***** Noxious stimuli is noted to produce not only different frequencies than non-noxious stimuli, but additionally cause this response in larger numbers of WDR neurons.
+***** 
+*** Additional reading
+Price and Dubner 1977; Dubner et al. 1986; Price et al. 1976, 1978; Coghill et al. 1993
+** Gebhart, Smith: Encyclopedia of Pain (2013)
+*** Price: p. 3653 (p. 3721):
+"WDR neurons are present in both superficial and deep layers of the dorsal horn. However, NS (nociceptive specific) neurons occur in highest percentages in the superficial layers (layers I-II), and the deep layers contain mostly WDR neurons"
+"WDR "
+
+"WDR neurons have several distinct and defining characteristics. First, they respond differentially over a broad range of stimulus intensity, extending from very gentle to distinctly painful levels of stimulation; noxious stimuli delivered to the most sensitive portion of their receptive fields evoke a higher impulse frequency than any form of innocuous stimulation.""
+
+"WDR neurons have a very distinct receptive field organization that contains a central cutaneous zone differen- tially responsive to non-noxious and noxious stimuli, and a larger surrounding zone that responds mainly to nociceptive stimuli. This receptive field organization provides a critical basis whereby populations of WDR neurons could encode the distinction between non- noxious and noxious stimulation. Multiple lines of evidence show that, in comparison to non- noxious stimuli, noxious stimuli activate higher impulse frequencies and a larger number of WDR neurons. Consideration of the number of neurons activated is important in explaining encoding mechanisms because populations are what respond during non-noxious and noxious stimulations."
+
+** Hu (1990): 
+
+** Zhang (2014): https://paperpile.com/app/p/5154bb99-8777-0685-bc05-85da1877c2a6
+In 2014, a simplified network was modelled and simulated based on this WDR neuron and new observations stemming from an original "gate control theory" (GCT) of pain. This network derived connectivity--especially the effects of the A fiber stimulation--primarily from a slightly advanced form of a simplified GCT model and created the network shown in (FIGURE 1). The in-silico model replicated some phenomena observed in spinal cord stimulation (SCS) and raised future avenues of research. However, it did not delve into the firing coding of nociceptive versus non-nociceptive inputs.
+
