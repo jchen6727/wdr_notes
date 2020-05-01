@@ -9,22 +9,71 @@ The first documented in vivo study of the "wide dynamic range" (WDR) neuron was 
 WDR neurons respond to both innocuous and noxious stimuli. Impulse frequency response of noxious stimuli is distinctly higher. 
 **** WDR have distinct receptive fields
 This consists a central cutaneous zone. Innocuous and noxious stimuli produce in this region produce a differentiable response--noxious stimuli in this zone causes a distinct high impulse frequency response. A larger surrounding zone responds mainly to noxious stimuli. 
+(innocuous stimuli -- e.g. a brush provokes 10 Hz to 15-20 Hz)
 **** Populations of WDR neurons and frequencies provide encoding on stimuli type and spatial distribution.
 ***** Noxious stimuli is noted to produce not only different frequencies than non-noxious stimuli, but additionally cause this response in larger numbers of WDR neurons.
-***** 
+***** somatotropic organization occurs in a medial-lateral fashion
 *** Additional reading
 Price and Dubner 1977; Dubner et al. 1986; Price et al. 1976, 1978; Coghill et al. 1993
-** Gebhart, Smith: Encyclopedia of Pain (2013)
-*** Price: p. 3653 (p. 3721):
-"WDR neurons are present in both superficial and deep layers of the dorsal horn. However, NS (nociceptive specific) neurons occur in highest percentages in the superficial layers (layers I-II), and the deep layers contain mostly WDR neurons"
-"WDR "
-
-"WDR neurons have several distinct and defining characteristics. First, they respond differentially over a broad range of stimulus intensity, extending from very gentle to distinctly painful levels of stimulation; noxious stimuli delivered to the most sensitive portion of their receptive fields evoke a higher impulse frequency than any form of innocuous stimulation.""
-
-"WDR neurons have a very distinct receptive field organization that contains a central cutaneous zone differen- tially responsive to non-noxious and noxious stimuli, and a larger surrounding zone that responds mainly to nociceptive stimuli. This receptive field organization provides a critical basis whereby populations of WDR neurons could encode the distinction between non- noxious and noxious stimulation. Multiple lines of evidence show that, in comparison to non- noxious stimuli, noxious stimuli activate higher impulse frequencies and a larger number of WDR neurons. Consideration of the number of neurons activated is important in explaining encoding mechanisms because populations are what respond during non-noxious and noxious stimulations."
 
 ** Hu (1990): 
 
 ** Zhang (2014): https://paperpile.com/app/p/5154bb99-8777-0685-bc05-85da1877c2a6
 In 2014, a simplified network was modelled and simulated based on this WDR neuron and new observations stemming from an original "gate control theory" (GCT) of pain. This network derived connectivity--especially the effects of the A fiber stimulation--primarily from a slightly advanced form of a simplified GCT model and created the network shown in (FIGURE 1). The in-silico model replicated some phenomena observed in spinal cord stimulation (SCS) and raised future avenues of research. However, it did not delve into the firing coding of nociceptive versus non-nociceptive inputs.
 
+** Todd (2010): https://paperpile.com/app/p/9422039c-ef94-0cf7-acbb-fb1fa149ff3b
+*** Cutaneous afferents
+**** Aδ         -> LI-LII (L1-LV)
+**** C (+NK1)   -> LI-LII
+**** C (-NK1)   -> LII
+**** C-LTMR (?) -> ?
+**** LTMR       -> LII-LV
+*** Descending inputs
+**** Serotonergic and noradrenergic pathway from nucleus raphe magnus, locus coeruleus, pontine regions: Diffuse
+**** GABA from rostral ventromedial medulla: LII
+
+*** Interneurons
+**** subtypes of LII classified into 4 classes as well as unclassified 
+***** islet (GABAergic -- inhibitory), central, vertical (glutamergic), radial (glutamergic)
+***** release GABA, Glycine  -> 25% I, 30% II, 40% III
+***** Glutamergic            -> Rest of population (?)
+
+*** Other Populations in the Dorsal Horn
+**** Projection neurons in LI, LIII-LVI
+**** LI (+NK1R) -> respond to noxious stimuli w/ dendrites in LI-> caudal ventrolateral medulla, nucleus of the solitary tract, lateral parabrachial area.
+**** LI (-NK1R) -> aka "giant cells" w/ dense excitatory and inhibitory input, sparse
+**** LIII, LIV (NK1R) -> extensive dendritic trees.
+**** In terms of cells of the deep spinothalamic tract (STT), the following distinct populations have been observed. 
+  
+**** non-glutamatergic cells
+**** glutamatergic cells (High Threshold, Wide Dynamic Range) -> NMDAR1, GluR1, GluR2/3, metabotropic GluR
+***** Type I STT cell: pyramidal soma with dendrites oriented along the rostro-caudal axis of the cord
+***** Type II STT cell: rounded soma with numerous primary dendrites extending in all directions) 
+**** Nociceptive specific (NS) neuron
+***** Input is A-delta mechanical nociceptive afferents and A-delta and C-nociceptive afferents. A-beta mechanoreceptors
+
+** Other Pathways of the Dorsal Horn
+*** descending inhibitory pathways (endogenous analgeisa system)
+*** descending excitatory pathways
+
+** Gebhart, Smith: Encyclopedia of Pain (2013)
+*** Willis p. 3632 (p. 3700):
+"and viscera. The signals are processed in the spinal cord and then are transmitted to the thalamus and, after a synaptic relay, to the SI and SII somatosensory cortices and other regions of the cerebral cortex (anterior cingulate gyrus, insula)."
+
+*** Willis p. 3646 (p. 3714):
+"These cells can usually be activated by volleys in Aab, Ad, and C fibers in the appropriate cutaneous nerve. The axons of these neurons project directly to the ventral posterior lateral (VPL) nucleus of the contralateral thalamus"
+
+"The VPL nucleus of the thalamus in turn transmits somatosensory information derived from the spinothalamic tract input to the somatosensory cerebral cortex. Presumably, this information is used for sensory discrimination of nociceptive stimuli. Many of these same spinothalamic tract cells also project to the contralateral central lateral nucleus, a part of the thalamic intralaminar complex."
+
+"For example, neurons located in the brain stem can modulate nociceptive signals by way of pathways that descend into the spinal cord. These brain stem neurons are in turn under the influence of neurons in the cerebral cortex and other areas of the forebrain. In addition, corticospinal projections affect the activity of STT cells. The analgesia that can be produced by stimulation of pathways descending from the brain stem has been termed “stimulation-produced analgesia.” -> endogenous opioid substances, inhibitory neurotransmitters including _norepinephrine and serotonin_
+
+Brain stem regions with inhibitory effect on spinothalamic neurons. Periaqueductal gray area, rostral ventral medulla, dorsolateral pons.
+
+Excitatory pathways -> primary motor cortex, medullary pyramid, medullary reticular formation
+
+*** Price: p. 3653 (p. 3721):
+"WDR neurons are present in both superficial and deep layers of the dorsal horn. However, NS (nociceptive specific) neurons occur in highest percentages in the superficial layers (layers I-II), and the deep layers contain mostly WDR neurons"
+
+"WDR neurons have several distinct and defining characteristics. First, they respond differentially over a broad range of stimulus intensity, extending from very gentle to distinctly painful levels of stimulation; noxious stimuli delivered to the most sensitive portion of their receptive fields evoke a higher impulse frequency than any form of innocuous stimulation.""
+
+"WDR neurons have a very distinct receptive field organization that contains a central cutaneous zone differen- tially responsive to non-noxious and noxious stimuli, and a larger surrounding zone that responds mainly to nociceptive stimuli. This receptive field organization provides a critical basis whereby populations of WDR neurons could encode the distinction between non- noxious and noxious stimulation. Multiple lines of evidence show that, in comparison to non- noxious stimuli, noxious stimuli activate higher impulse frequencies and a larger number of WDR neurons. Consideration of the number of neurons activated is important in explaining encoding mechanisms because populations are what respond during non-noxious and noxious stimulations."
