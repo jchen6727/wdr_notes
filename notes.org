@@ -77,3 +77,11 @@ Excitatory pathways -> primary motor cortex, medullary pyramid, medullary reticu
 "WDR neurons have several distinct and defining characteristics. First, they respond differentially over a broad range of stimulus intensity, extending from very gentle to distinctly painful levels of stimulation; noxious stimuli delivered to the most sensitive portion of their receptive fields evoke a higher impulse frequency than any form of innocuous stimulation.""
 
 "WDR neurons have a very distinct receptive field organization that contains a central cutaneous zone differen- tially responsive to non-noxious and noxious stimuli, and a larger surrounding zone that responds mainly to nociceptive stimuli. This receptive field organization provides a critical basis whereby populations of WDR neurons could encode the distinction between non- noxious and noxious stimulation. Multiple lines of evidence show that, in comparison to non- noxious stimuli, noxious stimuli activate higher impulse frequencies and a larger number of WDR neurons. Consideration of the number of neurons activated is important in explaining encoding mechanisms because populations are what respond during non-noxious and noxious stimulations."
+
+** Suzuki (2002): https://paperpile.com/app/p/cc80a1c4-d302-0a5c-b33a-7cbe5225f36a
+*** NK1R(+) in LI primarily nociceptive projection neuron
+*** SP-SAP injection depletes NK1R(+) LI/LIII
+*** SP-SAP reduces excitability of WDR neurons.
+*** Even though 5 HT-3 in the raphe nucleus or locus coeruleus produces analgesia, locally within the dorsal horn, the effect is of 5 HT-3 is pronociceptive.
+*** Antagonist
+*** Diffuse Noxious Inhibitory Control (DNIC)
