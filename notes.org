@@ -1,3 +1,4 @@
+* Background Notes
 ** Mendel (1966): https://paperpile.com/app/p/069d072e-636f-0a21-957b-da384bf145a0
 The first documented in vivo study of the "wide dynamic range" (WDR) neuron was conducted in 1966. This study, evaluating the dorsolateral column (within caudal L4 or L5) of the lumbar enlargement in adult cats, observed neurons which responded in a differential manner to contralateral A fiber and ipsilateral C fiber stimulation via their receptive fields. These neurons fired in response to both receptive fields, but a more "intense firing consist(ing) mainly of slower adaptation" was achieved from C fiber stimulation, which was additionally inhibited by A fiber stimulation. Though the synaptology and connectivity between the peripheral fibers and these WDR neurons was not explored at the time, future studies would further explore these networks and the WDR population in the dorsolateral column.
 
@@ -53,7 +54,7 @@ In 2014, a simplified network was modelled and simulated based on this WDR neuro
 ***** Input is A-delta mechanical nociceptive afferents and A-delta and C-nociceptive afferents. A-beta mechanoreceptors
 
 ** Other Pathways of the Dorsal Horn
-*** descending inhibitory pathways (endogenous analgeisa system)
+*** descending inhibitory pathways (endogenous analgesia system)
 *** descending excitatory pathways
 
 ** Gebhart, Smith: Encyclopedia of Pain (2013)
@@ -82,6 +83,64 @@ Excitatory pathways -> primary motor cortex, medullary pyramid, medullary reticu
 *** NK1R(+) in LI primarily nociceptive projection neuron
 *** SP-SAP injection depletes NK1R(+) LI/LIII
 *** SP-SAP reduces excitability of WDR neurons.
-*** Even though 5 HT-3 in the raphe nucleus or locus coeruleus produces analgesia, locally within the dorsal horn, the effect is of 5 HT-3 is pronociceptive.
-*** Antagonist
+*** 5 HT-3 in the raphe nucleus or locus coeruleus produces analgesia, locally within the dorsal horn, the effect is of 5 HT-3 is pronociceptive.
 *** Diffuse Noxious Inhibitory Control (DNIC)
+
+* 5.5.20
+** Looked into SG, IN, TEM cells.
+*** point processes are at dend(0.50) for other cells but dend(0.51) for SG cell
+*** rename cells for clarity? SG into IN interneuron and IN into EX interneuron. They are all "substantia gelatinosa" neurons after all.
+**** excerpt: https://neuron.yale.edu/ftp/ted/book/chap5.pdf
+The x position specified for a point process can have any value in the range [0,1]. If
+x is specified to be 0 or 1, the point process will be located at the corresponding end of
+the section. For specified locations 0 < x < 1, the actual position used by NEURON will
+be the center of the segment that contains x. Thus, if dend has nseg = 5, the segment
+centers (internal nodes) are located at x = 0.1, 0.3, 0.5, 0.7 and 0.9, so
+objref stim1, stim1
+dend stim1 = new IClamp(0.04)
+dend stim2 = new IClamp(0.61)
+would actually place stim1 at 0.1 and stim2 at 0.7. 
+**** the inodes relevant for nseg = 50 would be [0.01 + 0.02 * x for x in range(50)], which places (0.50) exactly between two inodes-- 0.49 and 0.51
+**** python code
+In [1]: from neuron import h                                                                                                                                                                                                   
+
+In [2]: h.load_file("IN.tem"); h.load_file("SG.tem"); h.load_file("WDR.tem")                                                                                                                                                   
+Out[2]: 1.0
+
+In [3]: inc, sgc, wdrc = h.IN(), h.SG(), h.WDR()                                                                                                                                                                               
+
+In [4]: (inc.dend.L, inc.dend.diam, inc.dend.nseg)                                                                                                                                                                             
+Out[4]: (400.0, 3.0, 5)
+
+In [5]: (sgc.dend.L, sgc.dend.diam, sgc.dend.nseg)                                                                                                                                                                             
+Out[5]: (1371.0, 1.4, 50)
+
+In [6]: (wdrc.dend.L, wdrc.dend.diam, wdrc.dend.nseg)                                                                                                                                                                          
+Out[6]: (350.0, 2.5, 5)
+
+**** unsure where these nseg values came from, this section probably is the worst offender
+In [7]: (sgc.axon.L, sgc.axon.diam, sgc.axon.nseg)                                                                                                                                                                             
+Out[7]: (0.001, 0.001, 50)
+*** none of the synapses are non-linear. so creating 15 netcons to 15 identical same inode point_processes?
+*** MODS
+**** B_A.mod, B_DR.mod, B_NA.mod
+original
+GLOBAL inf
+tries to force celsius to a specific value
+with USEION but sets ek when that should be a property of the section.
+forces backwards Euler solution.     <--- probably only real issue?
+q10 calculations in multiple places
+spurious local variables
+
+what is this?
+FUNCTION alp(v(mV),i) { LOCAL a,b,c,q10 :rest=-70 order n,h <--- what is this?
+	v = v                                                   <--- what is this?
+	q10 = 3^((celsius - 23)/10)
+	if (i==0) {
+		alp = q10 * .032*expM1(-v - 64 - 0 , 6)
+	}else if (i==1){
+		alp = q10 * 0.05/(exp((v + 86 + 0)/10)+1)
+	}
+}
+**** CaIntraCellDyn.mod
+SOLVE state METHOD euler
